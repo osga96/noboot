@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="adulto" class="com.example.demo.objects.Adulto">-->
+    <!--<bean id="adulto" class="com.example.demo.objects.Enano">-->
+    <bean id="señor" class="com.example.demo.objects.Señor">  
+
+		<constructor-arg ref="miInforme">
+
+		</constructor-arg>
+
+    </bean>
+
+    <bean id="enano" class="com.example.demo.objects.Enano">
+		<property name="informe" ref="miInforme"></property>
+    </bean>
+
+    <bean id="adulto" class="com.example.demo.objects.Adulto">  
+    </bean>
+
+
+
+
+
+	<!-- dependencia informe en personas-->
+    <bean id="miInforme" class="com.example.demo.objects.Informe">  
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+
+
+</beans>
