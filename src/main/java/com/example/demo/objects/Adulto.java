@@ -17,6 +17,6 @@ public class Adulto implements Persona {
 	public String getInforme() {
 		// TODO Auto-generated method stub
 		return "informe adulto" + informe.getInforme();
-	}
+	}	
 
 }
