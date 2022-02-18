@@ -4,12 +4,16 @@ import com.example.demo.interfaces.CreacionInformes;
 import com.example.demo.interfaces.Persona;
 
 public class Enano implements Persona {
+	
+	private CreacionInformes informe;
+	
+	private String propiedadComunATodosLosEnanos;
+	
+	private String caca;
 
 	public void setInforme(CreacionInformes informe) {
 		this.informe = informe;
 	}
-
-	private CreacionInformes informe;
 
 	@Override
 	public String getEdad() {
@@ -22,7 +26,21 @@ public class Enano implements Persona {
 		// TODO Auto-generated method stub
 		return "tienen informes los enanos: " + informe.getInforme();
 	}
-	
-	
+
+	public String getPropiedadComunATodosLosEnanos() {
+		return propiedadComunATodosLosEnanos;
+	}
+
+	public void setPropiedadComunATodosLosEnanos(String propiedadComunATodosLosEnanos) {
+		this.propiedadComunATodosLosEnanos = propiedadComunATodosLosEnanos;
+	}
+
+	public String getCaca() {
+		return caca;
+	}
+
+	public void setCaca(String caca) {
+		this.caca = caca;
+	}	
 
 }

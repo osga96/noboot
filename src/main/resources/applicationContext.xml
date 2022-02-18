@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+    <context:property-placeholder location="classpath:application.properties" />
 
     <!--<bean id="adulto" class="com.example.demo.objects.Adulto">-->
     <!--<bean id="adulto" class="com.example.demo.objects.Enano">-->
@@ -14,8 +19,14 @@
 
     </bean>
 
+    <!--<bean id="enano" class="com.example.demo.objects.Enano">
+		<property name="informe" ref="miInforme"></property>
+		<property name="propiedadComunATodosLosEnanos" value="enanosPropertyValue"></property>
+    </bean>-->
+
     <bean id="enano" class="com.example.demo.objects.Enano">
 		<property name="informe" ref="miInforme"></property>
+		<property name="propiedadComunATodosLosEnanos" value="${propiedadComunATodosLosEnanos}"></property>
     </bean>
 
     <bean id="adulto" class="com.example.demo.objects.Adulto">  
