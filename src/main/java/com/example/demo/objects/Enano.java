@@ -8,8 +8,6 @@ public class Enano implements Persona {
 	private CreacionInformes informe;
 	
 	private String propiedadComunATodosLosEnanos;
-	
-	private String caca;
 
 	public void setInforme(CreacionInformes informe) {
 		this.informe = informe;
@@ -34,13 +32,5 @@ public class Enano implements Persona {
 	public void setPropiedadComunATodosLosEnanos(String propiedadComunATodosLosEnanos) {
 		this.propiedadComunATodosLosEnanos = propiedadComunATodosLosEnanos;
 	}
-
-	public String getCaca() {
-		return caca;
-	}
-
-	public void setCaca(String caca) {
-		this.caca = caca;
-	}	
 
 }
